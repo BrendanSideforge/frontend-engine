@@ -1,0 +1,29 @@
+
+builder:
+
+  html:
+    parent_dir: "templates"
+    child_dir: "html"
+    remove_comments: true
+    remove_blank_lines: true
+  
+  css:
+    parent_dir: "templates"
+    child_dir: "css"
+    remove_comments: true
+    remove_blank_lines: true
+
+  build_dir: "build"
+
+universal_variables:
+
+  game_name: "Skibid.io"
+
+styles:
+  primary_background_color: "#333"
+  primary_font_color: white
+  primary_padding: 0
+  primary_margin: 0
+
+  primary_font_link: "'https:fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Raleway&family=Roboto&family=Ruwudu&display=swap'"
+  primary_font_name: "Roboto"

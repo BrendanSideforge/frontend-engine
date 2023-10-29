@@ -1,0 +1,16 @@
+
+@import url(--primary_font_link--);
+
+/* hi there */
+* {
+
+    padding: --primary_padding--;
+    margin: --primary_margin--;
+    font-family: --primary_font_name--;
+
+}
+
+body {
+    background: --primary_background_color--;
+    color: --primary_font_color--;
+}
