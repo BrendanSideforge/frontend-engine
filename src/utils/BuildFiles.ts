@@ -1,6 +1,7 @@
 
 import fs from "fs-extra";
 import { _CONFIG_ } from "..";
+import { write_to_logs } from "./Logger";
 
 /**
  * Create a new CSS file, name and byte size, with the modified css content
@@ -10,9 +11,18 @@ import { _CONFIG_ } from "..";
 
 export function buildCSSFile(filename: string, content: string) {
 
+    const encoded: any = new TextEncoder().encode(content);
+    const filename_mod: string = `${_CONFIG_.builder.build_dir}/` + `${filename}.css`;
+
     fs.writeFileSync (
-        `${_CONFIG_.builder.build_dir}/` + `${filename}.css`,
+        filename_mod,
         content
+    );
+
+    write_to_logs(
+        "actions",
+        `Built new CSS file at ${filename_mod} (${encoded.byteLength} bytes)`,
+        true
     );
 
 }
@@ -25,9 +35,18 @@ export function buildCSSFile(filename: string, content: string) {
 
 export function buildHTMLFile(filename: string, content: string) {
 
+    const encoded: any = new TextEncoder().encode(content);
+    const filename_mod: string = `${_CONFIG_.builder.build_dir}/` + `${filename}.html`;
+
     fs.writeFileSync (
-        `${_CONFIG_.builder.build_dir}/` + `${filename}.html`,
+        filename_mod,
         content
+    );
+
+    write_to_logs(
+        "actions",
+        `Built new HTML file at ${filename_mod} (${encoded.byteLength} bytes)`,
+        true
     );
 
 }

@@ -1,6 +1,7 @@
 
 import { _CONFIG_ } from "..";
 import { PageConfigLoader } from "./ConfigLoader";
+import { write_to_logs } from "./Logger";
 
 const htmlVariablePattern: RegExp = /\{[^}]*\}/g;
 const cssVariablePattern: RegExp = /--(.*?)--/g;
@@ -34,13 +35,12 @@ export function filterCodeContent(filename: string, content: string, filetype: s
     const styles_variables: Array<string> = Object.keys(_CONFIG_.styles)
     let modified_content: string = content;
 
-    console.log(matched_variables);
     for (let i: number = 0; i < matched_variables.length; i++) {
 
         const raw_variable: string = matched_variables[i];
         const variable: string = filetype === "html" ? matched_variables[i].replace("{", "").replace("}", "") : matched_variables[i].replace('--', '').replace("--", "");
 
-        console.log(variable, raw_variable);
+        // console.log(variable, raw_variable);
         if (setting_variables.includes(variable)) {
 
             const value: any = page_config.settings[variable];
@@ -89,6 +89,12 @@ export function filterCodeContent(filename: string, content: string, filetype: s
         modified_content = cleaned_code;
         
     }
+
+    write_to_logs(
+        "service",
+        `Replaced ${matched_variables.length} variables for the location: ${filename}`,
+        true
+    );
 
     return modified_content;
 
