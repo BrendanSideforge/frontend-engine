@@ -20,10 +20,28 @@ universal_variables:
   game_name: "Skibid.io"
 
 styles:
-  primary_background_color: "#333"
-  primary_font_color: white
+
   primary_padding: 0
   primary_margin: 0
 
+  primary_black: black
+  primary_white: white
+  primary_background_color: rgb(74, 134, 82)
+  primary_blue_color: rgb(63, 105, 129)
+  primary_red_color: rgb(129, 54, 51)
+  primary_grey_color: rgb(204, 203, 203)
+  primary_brown_color: rgb(98, 80, 74)
+  primary_dark_color: rgb(45, 45, 45)
+  primary_purple_color: rgb(77, 50, 134)
+  primary_dark_purple_color: rgb(64, 46, 120)
+  primary_shade_dark_purple_color: rgb(55, 42, 105)
+
+  primary_dark_shade: rgb(40, 40, 39)
+
+  top_navbar_background: rgba(45, 45, 45, 0.8)
+  top_navbar_background_border_color: rgb(45, 45, 45)
+  top_navbar_background_border_size: 4px
+
   primary_font_link: "'https:fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Raleway&family=Roboto&family=Ruwudu&display=swap'"
   primary_font_name: "Roboto"
+  primary_font_color: white

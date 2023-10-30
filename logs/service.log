@@ -1,4 +1,6 @@
-[10/29/2023 1:46:15 AM] [SERVICE] Loaded the global configuration
-[10/29/2023 1:46:15 AM] [SERVICE] Replaced 6 variables for the location: style
-[10/29/2023 1:46:15 AM] [SERVICE] Loaded configuration for: index.yaml (from ./config/pages/index.yaml)
-[10/29/2023 1:46:15 AM] [SERVICE] Replaced 5 variables for the location: index
+[10/29/2023 8:44:57 PM] [SERVICE] Loaded the global configuration
+[10/29/2023 8:44:57 PM] [SERVICE] Replaced 5 variables for the location: PageContent
+[10/29/2023 8:44:57 PM] [SERVICE] Loaded configuration for: index.yaml (from ./config/pages/index.yaml)
+[10/29/2023 8:44:57 PM] [SERVICE] Replaced 3 variables for the location: index
+[10/29/2023 8:44:57 PM] [SERVICE] Replaced 6 variables for the location: style
+[10/29/2023 8:44:57 PM] [SERVICE] Replaced 11 variables for the location: TopNavbar

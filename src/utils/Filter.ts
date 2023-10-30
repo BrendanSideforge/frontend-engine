@@ -27,6 +27,9 @@ export function filterCodeContent(filename: string, content: string, filetype: s
 
 
     const matched_variables: Array<string> | undefined = content.match(filetype === "html" ? htmlVariablePattern : cssVariablePattern);
+    
+    if (!matched_variables) return content;
+    
     const page_config: object | any = filetype === "html" ? PageConfigLoader(`${filename}.yaml`) : _CONFIG_;
 
     const setting_variables: Array<string> = filetype === "html" ? Object.keys(page_config.settings) : [];
@@ -39,8 +42,7 @@ export function filterCodeContent(filename: string, content: string, filetype: s
 
         const raw_variable: string = matched_variables[i];
         const variable: string = filetype === "html" ? matched_variables[i].replace("{", "").replace("}", "") : matched_variables[i].replace('--', '').replace("--", "");
-
-        // console.log(variable, raw_variable);
+        
         if (setting_variables.includes(variable)) {
 
             const value: any = page_config.settings[variable];

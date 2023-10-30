@@ -1,0 +1,57 @@
+
+.page-layout {
+
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.page-layout .sidebar {
+
+    height: 100%;
+    width: 175px;
+    /* background-color: black; */
+    overflow: hidden;
+
+}
+
+.page-layout .sidebar .pages {
+
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+.page-layout .sidebar .pages .button {
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+    background: --top_navbar_background--;
+    border: 4px solid --primary_black--;
+    padding: 15px;
+    min-height: 120px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2px;
+    box-shadow: inset 0 -4px 0 0 --primary_dark_shade--;
+    border-radius: 2px;
+
+}
+
+.page-layout .sidebar .pages #active {
+
+    background-color: --primary_dark_purple_color--;
+    position: relative;
+    width: 100%;
+    height: 140px;
+
+    box-shadow: inset 0 -6px 0 0 --primary_shade_dark_purple_color--;
+}
+
